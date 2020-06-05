@@ -7,7 +7,9 @@
     "lint": "prettier --check \"src/**/*.js\""
   },
   "dependencies": {
-    "canvas-confetti": "^1.2.0"
+    "canvas-confetti": "^1.2.0",
+    "matter-js": "^0.14.2",
+    "poly-decomp": "^0.3.0"
   },
   "devDependencies": {
     "prettier": "^2.0.0",
