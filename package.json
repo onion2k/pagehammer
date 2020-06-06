@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "canvas-confetti": "^1.2.0",
+    "delaunator": "^4.0.1",
+    "earcut": "^2.2.2",
     "matter-js": "^0.14.2",
     "poly-decomp": "^0.3.0"
   },
