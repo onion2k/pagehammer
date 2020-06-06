@@ -20,7 +20,6 @@ canvas.height = height;
 
 // module aliases
 const Engine = Matter.Engine;
-const Render = Matter.Render;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Runner = Matter.Runner;
