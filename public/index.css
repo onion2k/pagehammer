@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
+
 body {
   margin: 0;
   padding: 0;
-  background-color: red;
+  background-color: #444444;
 }
 
 canvas {
@@ -10,21 +12,30 @@ canvas {
 }
 
 div.tri {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
   position: absolute;
   z-index: 2;
   background-color: aqua;
   width: 450px;
   height: 450px;
+  display: none;
 }
 
 div.tri:nth-of-type(1) {
   clip-path: polygon(0px 0px, 150px 0px, 0px 300px);
+  transform-origin: 50px 100px;
+  display: block;
 }
 
 div.tri:nth-of-type(2) {
   clip-path: polygon(150px 0px, 450px 0px, 200px 200px);
+  transform-origin: 267px 67px;
+  display: block;
 }
 
+/* 
 div.tri:nth-of-type(3) {
   clip-path: polygon(450px 0px, 450px 200px, 200px 450px);
 }
@@ -47,4 +58,4 @@ div.tri:nth-of-type(7) {
 
 div.tri:nth-of-type(8) {
   clip-path: polygon(0px 300px, 200px 450px, 0px 450px);
-}
+} */
