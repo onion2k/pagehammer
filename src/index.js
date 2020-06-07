@@ -25,14 +25,16 @@ const engine = Engine.create({
 
 const base = document.getElementById('base');
 
-const bodies = [];
-const dombods = [];
-const points = [[0,0], [width,0], [width,height], [0,height], [width*0.5,0], [width*0.5,height]];
-
 const cellBase = 3;
 const randomOffset = 150;
 const cellWidth = width / cellBase;
 const cellHeight = height / cellBase;
+
+const bodies = [];
+const dombods = [];
+const tris = [];
+
+const points = [[0,0], [width,0], [width,height], [0,height], [width*0.5,0], [width*0.5,height]];
 for (let x = 0; x < cellBase*cellBase; x++) {
   points.push(
     [
@@ -41,8 +43,8 @@ for (let x = 0; x < cellBase*cellBase; x++) {
     ]
   );
 }
+
 const del = Delaunator.from(points);
-const tris = [];
 
 for (let i = 0; i < del.triangles.length; i += 3) {
   tris.push([
@@ -68,9 +70,9 @@ for (let x=0; x< tris.length; x++) {
   dombods.push([domtri, c[0], c[1]]);
 }
 
-bodies.push(Bodies.rectangle(width/2, height+70, width * 2, 100, { isStatic: true })); // ground
-bodies.push(Bodies.rectangle(-40, height/2, 40, height, { isStatic: true })); // left
-bodies.push(Bodies.rectangle(width+40, height/2, 40, height, { isStatic: true })); // right
+bodies.push(Bodies.rectangle(width/2, height+155, width * 2, 300, { isStatic: true })); // ground
+bodies.push(Bodies.rectangle(-120, height/2, 100, height, { isStatic: true })); // left
+bodies.push(Bodies.rectangle(width+120, height/2, 100, height, { isStatic: true })); // right
 
 World.add(engine.world, bodies);
 
