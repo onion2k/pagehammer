@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #444444;
+  overflow: hidden;
 }
 
 canvas {
@@ -12,14 +13,11 @@ canvas {
 }
 
 div#base {
+  position: absolute;
   font-family: "Playfair Display", serif;
   font-size: 1.2em;
   line-height: 1.5em;
-  position: absolute;
-  left: calc(50vw - 225px);
   z-index: 2;
   background-color: white;
-  width: 450px;
-  height: 450px;
-  display: none;
+  padding: 20px;
 }
