@@ -63,7 +63,6 @@ for (let x=0; x< tris.length; x++) {
 
   const domtri = base.cloneNode(true);
   domtri.style.transformOrigin = `${c[0]}px ${c[1]}px`;
-  domtri.style.display = 'block';
   domtri.style.clipPath = `polygon(${v[0].x}px ${v[0].y}px, ${v[1].x}px ${v[1].y}px, ${v[2].x}px ${v[2].y}px)`;
   document.body.appendChild(domtri);
   dombods.push([domtri, c[0], c[1]]);
@@ -83,7 +82,7 @@ Events.on(engine, "afterUpdate", ()=>{
   }
 });
 
-document.body.addEventListener('click', ()=>{
+document.getElementById('smash').addEventListener('click', ()=>{
   base.style.display = 'none';
   Runner.run(runner, engine);
 })

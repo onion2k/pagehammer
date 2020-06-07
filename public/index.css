@@ -1,10 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville&display=swap');
 
 body {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #444444;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 canvas {
@@ -12,12 +17,38 @@ canvas {
   z-index: 1;
 }
 
-div#base {
+div.base {
   position: absolute;
-  font-family: "Playfair Display", serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 1.2em;
   line-height: 1.5em;
   z-index: 2;
   background-color: white;
-  padding: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div#base > div {
+  flex: 1;
+}
+
+.title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 16vw;
+  line-height: 1em;
+}
+
+button {
+  width: 20vw;
+  height: 10vw;
+  background-color: red;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 5vw;
+  z-index: 5;
+  margin-bottom: 100px;
+  align-self: flex-end;
+  justify-self: center;
 }
