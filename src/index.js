@@ -30,7 +30,7 @@ const dombods = [];
 const points = [[0,0], [width,0], [width,height], [0,height], [width*0.5,0], [width*0.5,height]];
 
 const cellBase = 3;
-const randomOffset = 300;
+const randomOffset = 150;
 const cellWidth = width / cellBase;
 const cellHeight = height / cellBase;
 for (let x = 0; x < cellBase*cellBase; x++) {
