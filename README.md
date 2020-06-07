@@ -1,24 +1,33 @@
-# New Project
+# Smash
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+Smash is a breakable web page.
 
-## Available Scripts
+## Running Smash locally
 
-### npm start
+Clone the repo, and run `npm i && npm start` to start the development server. It's built with Snowpack so all the usual snowpack things work.
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+## How Smash works
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+Smash uses Delaunator to create a mesh of triangles, and then it uses matter.js to simulate how the triangles would fall apart under the influence of gravity.
 
-### npm run build
+The lifecycle of the page is as follows;
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+* The page loads and index.js runs
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" or "@snowpack/plugin-parcel" to your `snowpack.config.json` config file.
+* index.js creates a set of points that represent the edges of the page with some additional random points spread out across the viewport.
 
-### Q: What about Eject?
+* Delaunator takes these points and creates a mesh of triangles to connect them all
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+* For each triangle the base div is cloned and injected in to the page body, and the div is clipped to the triangle using clip-path.
+
+* A matching triangle is also created in the matter.js world.
+
+* When the user clicks the "Smash" button the physics engine is started.
+
+* On each tick of the physics engine the triangle polygons move, and their position and rotation data is converted to a CSS tranform that's applied to the corresponding triangle in the page.
+
+* Everything falls apart.
+
+## Contributing
+
+PRs are welcome, especially for performance fixes.
