@@ -117,6 +117,7 @@ for (let x=0; x< tris.length; x++) {
    * Clip the DOM to the same coordinates as the triangle in matter.js
    */
   domtri.style.clipPath = `polygon(${v[0].x}px ${v[0].y}px, ${v[1].x}px ${v[1].y}px, ${v[2].x}px ${v[2].y}px)`;
+  domtri.style.webkitClipPath = `polygon(${v[0].x}px ${v[0].y}px, ${v[1].x}px ${v[1].y}px, ${v[2].x}px ${v[2].y}px)`;
 
   /**
    * Add the triangle to the page body
