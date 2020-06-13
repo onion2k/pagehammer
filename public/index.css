@@ -41,12 +41,12 @@ div#base > div {
 }
 
 button {
-  width: 20vw;
-  height: 10vw;
+  width: 50vw;
+  height: 20vw;
   background-color: red;
   color: white;
   font-family: 'Bebas Neue', cursive;
-  font-size: 5vw;
+  font-size: 15vw;
   z-index: 5;
   margin-bottom: 100px;
   align-self: flex-end;
@@ -63,6 +63,7 @@ header, footer {
   flex-direction: row;
   justify-content: space-between;
   z-index: 8;
+  display: none;
 }
 
 header {
@@ -77,4 +78,15 @@ footer {
 
 header > div, footer > div {
   padding: 5px;
+}
+
+@media (min-width: 700px) {
+  button {
+    width: 20vw;
+    height: 10vw;  
+    font-size: 5vw;
+  }
+  header, footer {
+    display: flex;
+  }
 }
